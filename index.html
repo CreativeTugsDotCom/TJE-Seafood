@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TJE Seafood | Fresh From the Gulf in Floral City, FL</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coastal: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        sand: {
+                            50: '#fdfbf7',
+                            100: '#f9f6ed',
+                            200: '#f0eada',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfbf7;
+            color: #1e293b;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-sand-50 text-slate-800 antialiased selection:bg-coastal-600 selection:text-white">
+
+    <!-- Sticky Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#home" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-full bg-coastal-600 flex items-center justify-center text-white shadow-md group-hover:bg-coastal-700 transition-colors">
+                    <i class="fa-solid fa-fish text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-2xl font-serif font-bold text-slate-900 tracking-tight block">TJE Seafood</span>
+                    <span class="text-xs font-medium text-coastal-700 tracking-wider uppercase">Floral City, FL</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center space-x-7">
+                <a href="#home" class="text-sm font-medium text-slate-700 hover:text-coastal-600 transition-colors">Home</a>
+                <a href="#about" class="text-sm font-medium text-slate-700 hover:text-coastal-600 transition-colors">About</a>
+                <a href="#seafood" class="text-sm font-medium text-slate-700 hover:text-coastal-600 transition-colors">Fresh Seafood</a>
+                <a href="#markets" class="text-sm font-medium text-slate-700 hover:text-coastal-600 transition-colors">Markets</a>
+                <a href="#foodtruck" class="text-sm font-medium text-slate-700 hover:text-coastal-600 transition-colors">Food Truck</a>
+                <a href="#gallery" class="text-sm font-medium text-slate-700 hover:text-coastal-600 transition-colors">Photo Gallery</a>
+                <a href="#reviews" class="text-sm font-medium text-slate-700 hover:text-coastal-600 transition-colors">Reviews</a>
+                <a href="#contact" class="text-sm font-medium text-slate-700 hover:text-coastal-600 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Call CTA & Mobile Toggle -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="tel:3524194495" class="inline-flex items-center gap-2 bg-coastal-600 hover:bg-coastal-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-md shadow-coastal-600/20 transition-all hover:scale-[1.02] active:scale-[0.98]">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Call to Order</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" aria-label="Toggle Navigation" class="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-4 shadow-xl">
+            <a href="#home" class="block text-base font-medium text-slate-800 hover:text-coastal-600 py-1 mobile-link">Home</a>
+            <a href="#about" class="block text-base font-medium text-slate-800 hover:text-coastal-600 py-1 mobile-link">About</a>
+            <a href="#seafood" class="block text-base font-medium text-slate-800 hover:text-coastal-600 py-1 mobile-link">Fresh Seafood</a>
+            <a href="#markets" class="block text-base font-medium text-slate-800 hover:text-coastal-600 py-1 mobile-link">Markets</a>
+            <a href="#foodtruck" class="block text-base font-medium text-slate-800 hover:text-coastal-600 py-1 mobile-link">Food Truck</a>
+            <a href="#gallery" class="block text-base font-medium text-slate-800 hover:text-coastal-600 py-1 mobile-link">Photo Gallery</a>
+            <a href="#reviews" class="block text-base font-medium text-slate-800 hover:text-coastal-600 py-1 mobile-link">Reviews</a>
+            <a href="#contact" class="block text-base font-medium text-slate-800 hover:text-coastal-600 py-1 mobile-link">Contact</a>
+            <div class="pt-2">
+                <a href="tel:3524194495" class="w-full flex items-center justify-center gap-2 bg-coastal-600 text-white px-5 py-3 rounded-xl font-semibold shadow-md">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Call (352) 419-4495</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-24 md:pt-40 md:pb-36 overflow-hidden bg-slate-900">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0 opacity-50">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1600" alt="TJE Seafood Fresh Catch" class="w-full h-full object-cover object-center transform scale-105 transition-transform duration-1000">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-transparent z-0"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl fade-in-up">
+                <!-- Trust Badge -->
+                <div class="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full text-white text-xs sm:text-sm font-medium mb-6">
+                    <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>98% Recommended • 3.5K+ Followers • Family Owned</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold text-white tracking-tight leading-tight mb-6">
+                    Fresh From the Gulf. <span class="text-coastal-200 italic">Straight to Your Table.</span>
+                </h1>
+
+                <p class="text-lg sm:text-xl text-slate-200 font-light leading-relaxed mb-10 max-w-2xl">
+                    Family-owned and proudly serving fresh Gulf seafood throughout Floral City and beyond. Caught with care, brought directly to our local market, farmers' markets, and Friday food truck.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                    <a href="tel:3524194495" class="inline-flex items-center justify-center gap-3 bg-coastal-600 hover:bg-coastal-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg shadow-coastal-600/30 transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-phone text-lg"></i>
+                        <span>Call TJE Seafood</span>
+                    </a>
+                    <a href="#markets" class="inline-flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-xl font-semibold transition-all">
+                        <i class="fa-solid fa-store text-lg"></i>
+                        <span>Find Us at the Market</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Info Ribbon -->
+        <div class="absolute bottom-0 left-0 right-0 bg-slate-900/90 backdrop-blur-md border-t border-slate-800 text-white py-4 hidden md:block">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center text-sm">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-location-dot text-coastal-400 text-lg"></i>
+                    <span>5636 S. Florida Ave, Floral City, FL 34436</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-truck-fast text-coastal-400 text-lg"></i>
+                    <span>Friday Food Truck Available</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-thumbs-up text-coastal-400 text-lg"></i>
+                    <span>3.5K+ Loyal Community Followers</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-sand-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                <!-- Image Side -->
+                <div class="lg:col-span-6 relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=1000" alt="TJE Seafood Catch and Setup" class="w-full h-[480px] object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -right-6 sm:bottom-8 sm:-right-8 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 max-w-xs hidden sm:block">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-coastal-100 text-coastal-700 flex items-center justify-center font-bold text-xl">
+                                <i class="fa-solid fa-anchor"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-slate-900 text-lg">The Cochran Family</h4>
+                                <p class="text-xs text-slate-600">Actively fishing out of the Gulf</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Side -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-coastal-700 font-semibold text-sm uppercase tracking-wider">
+                        <i class="fa-solid fa-ship"></i>
+                        <span>Family Heritage & Passion</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900 tracking-tight leading-tight">
+                        Family-Owned. Gulf-Fresh. Community Loved.
+                    </h2>
+                    <p class="text-slate-600 text-lg leading-relaxed font-light">
+                        TJE Seafood is proudly run by the Cochran family. We actively fish out of the Gulf of Mexico to bring our customers the absolute freshest seafood available in Citrus County and beyond.
+                    </p>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Quality, freshness, and genuine family values are at the heart of everything we do. Whether you visit our retail store in Floral City, catch us at a regional farmers' market, or grab a bite at our Friday food truck, you're tasting true Gulf-to-table freshness backed by a community that trusts us.
+                    </p>
+                    <div class="pt-4 flex items-center gap-6">
+                        <div>
+                            <span class="block text-3xl font-serif font-bold text-coastal-700">98%</span>
+                            <span class="text-sm text-slate-600">Customer Recommendation</span>
+                        </div>
+                        <div class="h-10 w-px bg-slate-200"></div>
+                        <div>
+                            <span class="block text-3xl font-serif font-bold text-coastal-700">3.5K+</span>
+                            <span class="text-sm text-slate-600">Followers & Friends</span>
+                        </div>
+                        <div class="h-10 w-px bg-slate-200"></div>
+                        <div>
+                            <span class="block text-3xl font-serif font-bold text-coastal-700">100%</span>
+                            <span class="text-sm text-slate-600">Gulf Freshness</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fresh Seafood Section -->
+    <section id="seafood" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-coastal-700 font-semibold text-sm uppercase tracking-wider block mb-2">
+                    <i class="fa-solid fa-water"></i> Premium Selection
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900 tracking-tight mb-4">
+                    Fresh Seafood You Can Taste the Difference In
+                </h2>
+                <p class="text-slate-600 text-lg font-light">
+                    Sourced directly from the Gulf waters by the Cochran family. Discover our exceptional daily offerings available at our Floral City store and markets.
+                </p>
+            </div>
+
+            <!-- Seafood Grid with distinct, high-definition images -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: Fresh Gulf Fish -->
+                <div class="bg-sand-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=800" alt="Fresh Gulf Fish Display" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-80"></div>
+                        <span class="absolute bottom-4 left-4 text-white font-serif text-2xl font-semibold">Fresh Gulf Fish</span>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Sourced straight from the Gulf, expertly cleaned and handled to preserve pristine texture and natural ocean flavor.
+                        </p>
+                        <a href="tel:3524194495" class="inline-flex items-center gap-2 text-coastal-700 font-semibold text-sm hover:text-coastal-800">
+                            <span>Check Availability</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Fresh Shrimp -->
+                <div class="bg-sand-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&q=80&w=800" alt="Fresh Gulf Shrimp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-80"></div>
+                        <span class="absolute bottom-4 left-4 text-white font-serif text-2xl font-semibold">Fresh Shrimp</span>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Sweet, firm, and succulent Gulf shrimp harvested locally. Perfect for boils, grilling, or your favorite seafood recipes.
+                        </p>
+                        <a href="tel:3524194495" class="inline-flex items-center gap-2 text-coastal-700 font-semibold text-sm hover:text-coastal-800">
+                            <span>Check Availability</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Gulf Seafood -->
+                <div class="bg-sand-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&q=80&w=800" alt="Authentic Gulf Seafood Catch" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-80"></div>
+                        <span class="absolute bottom-4 left-4 text-white font-serif text-2xl font-semibold">Gulf Seafood</span>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            An authentic selection of regional seafood treasures brought straight to shore by fishermen who know the Gulf best.
+                        </p>
+                        <a href="tel:3524194495" class="inline-flex items-center gap-2 text-coastal-700 font-semibold text-sm hover:text-coastal-800">
+                            <span>Check Availability</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Market Favorites -->
+                <div class="bg-sand-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&q=80&w=800" alt="Market Seafood Display" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-80"></div>
+                        <span class="absolute bottom-4 left-4 text-white font-serif text-2xl font-semibold">Market Favorites</span>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Our customers' top picks available at our Floral City retail store and our regular farmers' market stops.
+                        </p>
+                        <a href="tel:3524194495" class="inline-flex items-center gap-2 text-coastal-700 font-semibold text-sm hover:text-coastal-800">
+                            <span>Check Availability</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 5: Fresh Catch -->
+                <div class="bg-sand-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1559741512-850f7944ce2f?auto=format&fit=crop&q=80&w=800" alt="Daily Fresh Catch" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-80"></div>
+                        <span class="absolute bottom-4 left-4 text-white font-serif text-2xl font-semibold">Fresh Catch</span>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            What comes in depends on what’s biting! Experience genuine seasonal variety brought in fresh on regular runs.
+                        </p>
+                        <a href="tel:3524194495" class="inline-flex items-center gap-2 text-coastal-700 font-semibold text-sm hover:text-coastal-800">
+                            <span>Check Availability</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 6: Seasonal Seafood -->
+                <div class="bg-sand-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&q=80&w=800" alt="Seasonal Gulf Offerings" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-80"></div>
+                        <span class="absolute bottom-4 left-4 text-white font-serif text-2xl font-semibold">Seasonal Seafood</span>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Enjoy special seasonal catches responsibly harvested from local waters throughout the year.
+                        </p>
+                        <a href="tel:3524194495" class="inline-flex items-center gap-2 text-coastal-700 font-semibold text-sm hover:text-coastal-800">
+                            <span>Check Availability</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action Ribbon -->
+            <div class="mt-16 bg-coastal-50 border border-coastal-100 rounded-3xl p-8 sm:p-12 text-center max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+                <div class="text-left">
+                    <h3 class="text-2xl font-serif font-bold text-slate-900 mb-2">Call for Today's Fresh Catch</h3>
+                    <p class="text-slate-600">Inventory updates daily based on our fishing runs. Call ahead to reserve yours!</p>
+                </div>
+                <a href="tel:3524194495" class="whitespace-nowrap bg-coastal-600 hover:bg-coastal-700 text-white font-semibold px-8 py-4 rounded-xl shadow-md transition-all hover:scale-105">
+                    <i class="fa-solid fa-phone mr-2"></i> (352) 419-4495
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Where to Find Us Section -->
+    <section id="markets" class="py-24 bg-sand-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-coastal-700 font-semibold text-sm uppercase tracking-wider block mb-2">
+                    <i class="fa-solid fa-map-location-dot"></i> Multiple Ways to Buy
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900 tracking-tight mb-4">
+                    Where Can You Find Us?
+                </h2>
+                <p class="text-slate-600 text-lg font-light">
+                    We bring our fresh seafood directly to the community through our retail store, local farmers' markets, and our Friday food truck.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1: Retail Store -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200/80 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&q=80&w=800" alt="Floral City Retail Store" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-slate-900/20"></div>
+                            <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-coastal-800">Floral City</span>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-serif font-bold text-slate-900 mb-3">Retail Store</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Visit us at our Floral City location for fresh seafood, friendly service, and a true local market experience.
+                            </p>
+                            <div class="space-y-2 text-xs text-slate-500 mb-6">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-location-dot text-coastal-600"></i>
+                                    <span>5636 S. Florida Ave, Floral City, FL 34436</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0">
+                        <a href="#contact" class="inline-flex items-center justify-center gap-2 w-full bg-slate-100 hover:bg-coastal-600 hover:text-white text-slate-800 font-semibold py-3 rounded-xl transition-colors text-sm">
+                            <span>Get Directions</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Farmers Markets -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200/80 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1488459716770-c44b305ef7a5?auto=format&fit=crop&q=80&w=800" alt="Farmers Markets and Community Events" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-slate-900/20"></div>
+                            <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-coastal-800">Local Events</span>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-serif font-bold text-slate-900 mb-3">Farmers' Markets</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Find TJE Seafood at multiple local farmers' markets and community events. Follow our social media or call ahead to see our schedule!
+                            </p>
+                            <div class="space-y-2 text-xs text-slate-500 mb-6">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-calendar-days text-coastal-600"></i>
+                                    <span>Multiple Weekly Market Locations</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0">
+                        <a href="tel:3524194495" class="inline-flex items-center justify-center gap-2 w-full bg-slate-100 hover:bg-coastal-600 hover:text-white text-slate-800 font-semibold py-3 rounded-xl transition-colors text-sm">
+                            <span>Ask About Markets</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Friday Food Truck -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200/80 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=800" alt="Seafood Food Truck Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-slate-900/20"></div>
+                            <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-coastal-800">Fridays Only</span>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-serif font-bold text-slate-900 mb-3">Friday Food Truck</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Catch our food truck on Fridays for a fresh, delicious seafood experience cooked and served to absolute perfection.
+                            </p>
+                            <div class="space-y-2 text-xs text-slate-500 mb-6">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-clock text-coastal-600"></i>
+                                    <span>Every Friday • Follow Us for Location</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0">
+                        <a href="#foodtruck" class="inline-flex items-center justify-center gap-2 w-full bg-slate-100 hover:bg-coastal-600 hover:text-white text-slate-800 font-semibold py-3 rounded-xl transition-colors text-sm">
+                            <span>Explore Food Truck</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Truck Feature Section -->
+    <section id="foodtruck" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-35">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=1200" alt="Seafood Truck Experience" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/90 to-slate-900/70 z-0"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-coastal-600/30 border border-coastal-600/50 px-4 py-2 rounded-full text-coastal-100 text-xs font-semibold tracking-wider uppercase">
+                        <i class="fa-solid fa-fire-burner"></i>
+                        <span>Weekly Tradition</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white tracking-tight leading-tight">
+                        Fresh Seafood on the Move
+                    </h2>
+                    <p class="text-slate-300 text-lg font-light leading-relaxed">
+                        Looking for us on Friday? Follow the TJE Seafood food truck for a fresh, delicious seafood experience that brings the taste of the Gulf straight to your weekend.
+                    </p>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Prepared hot, seasoned to perfection, and served with the same familial warmth you've come to expect from the Cochran family. Give us a call to find out where we are parked this Friday!
+                    </p>
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                        <a href="tel:3524194495" class="inline-flex items-center justify-center gap-3 bg-coastal-600 hover:bg-coastal-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg transition-all">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Ask About Friday's Food Truck</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-3xl space-y-6 shadow-2xl">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-coastal-600 text-white flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-xl text-white">Friday Schedule</h3>
+                                <p class="text-xs text-slate-300">Open Every Friday</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-slate-200 leading-relaxed">
+                            Locations can vary weekly based on local events and community stops. Call <span class="font-semibold text-white">(352) 419-4495</span> to confirm today's exact spot!
+                        </p>
+                        <div class="border-t border-white/10 pt-4 flex items-center justify-between text-xs text-slate-300">
+                            <span>Family Run</span>
+                            <span>•</span>
+                            <span>Gulf Fresh</span>
+                            <span>•</span>
+                            <span>Cooked Fresh</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery & Community Highlights Section -->
+    <section id="gallery" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-coastal-700 font-semibold text-sm uppercase tracking-wider block mb-2">
+                    <i class="fa-solid fa-images"></i> Visual Highlights
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900 tracking-tight mb-4">
+                    TJE Seafood in Action
+                </h2>
+                <p class="text-slate-600 text-lg font-light">
+                    Take a look at our mobile seafood market setup, community highlights, and fresh Gulf offerings.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Gallery Item 1 -->
+                <div class="bg-sand-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-80 sm:h-96 overflow-hidden relative">
+                        <img src="1.jpg" alt="TJE Seafood Mobile Setup & Sign Board" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=1000';">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-serif font-bold text-slate-900 mb-2">TJE Seafood Setup & Menu Board</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Our mobile seafood market and setup featuring jumbo shrimp, fresh oysters, blue crab, and daily fresh catches ready for the community.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="bg-sand-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-80 sm:h-96 overflow-hidden relative">
+                        <img src="2.jpg" alt="Community Breakfast & Local Events" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=1000';">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-serif font-bold text-slate-900 mb-2">Community Events & Local Gatherings</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Proudly participating in local community events and breakfast gatherings right here in Floral City, Florida.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose TJE Seafood -->
+    <section class="py-24 bg-sand-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-coastal-700 font-semibold text-sm uppercase tracking-wider block mb-2">
+                    <i class="fa-solid fa-shield-heart"></i> Our Core Promise
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900 tracking-tight mb-4">
+                    Why Choose TJE Seafood
+                </h2>
+                <p class="text-slate-600 text-lg font-light">
+                    Built on hard work, family commitment, and an unwavering dedication to quality Gulf seafood.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Pillar 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/80 hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-coastal-100 text-coastal-700 flex items-center justify-center text-xl mb-6 group-hover:bg-coastal-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-slate-900 mb-2">Gulf Fresh</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Seafood sourced directly from the Gulf by people who know the waters.
+                    </p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/80 hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-coastal-100 text-coastal-700 flex items-center justify-center text-xl mb-6 group-hover:bg-coastal-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-people-roof"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-slate-900 mb-2">Family Owned</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Proudly operated by the Cochran family with generations of dedication.
+                    </p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/80 hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-coastal-100 text-coastal-700 flex items-center justify-center text-xl mb-6 group-hover:bg-coastal-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-slate-900 mb-2">Community Focused</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Serving customers through local markets and our Floral City store.
+                    </p>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/80 hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-coastal-100 text-coastal-700 flex items-center justify-center text-xl mb-6 group-hover:bg-coastal-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-slate-900 mb-2">Freshness First</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Bringing customers seafood they can feel good about serving to family and friends.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="reviews" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 px-4 py-2 rounded-full text-amber-800 text-xs font-semibold uppercase tracking-wider mb-4">
+                    <i class="fa-solid fa-star text-amber-500"></i>
+                    <span>98% Recommend TJE Seafood</span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900 tracking-tight mb-4">
+                    Loved By Our Community
+                </h2>
+                <p class="text-slate-600 text-lg font-light">
+                    Read what our loyal followers and community members have to say about our fresh catch and family service.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Testimonial Card 1 -->
+                <div class="bg-sand-50 p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm italic leading-relaxed mb-6">
+                            "The absolute best seafood around Floral City! You can truly taste the difference when it comes straight from the Gulf. The Cochran family is wonderful."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 border-t border-slate-200/60 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-coastal-600 text-white font-bold flex items-center justify-center text-sm">
+                            VM
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-slate-900 text-sm">Verified Local Customer</h4>
+                            <p class="text-xs text-slate-500">Floral City, FL</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 2 -->
+                <div class="bg-sand-50 p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm italic leading-relaxed mb-6">
+                            "We always look forward to visiting their Friday food truck and catching them at the local farmers' market. Incredible freshness and friendly service every single time."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 border-t border-slate-200/60 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-coastal-600 text-white font-bold flex items-center justify-center text-sm">
+                            MC
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-slate-900 text-sm">Farmers' Market Regular</h4>
+                            <p class="text-xs text-slate-500">Citrus County</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 3 -->
+                <div class="bg-sand-50 p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm italic leading-relaxed mb-6">
+                            "Knowing it's caught right out of the Gulf by a hardworking local family makes buying here so special. Top tier quality and extremely clean store!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 border-t border-slate-200/60 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-coastal-600 text-white font-bold flex items-center justify-center text-sm">
+                            JL
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-slate-900 text-sm">Store Customer</h4>
+                            <p class="text-xs text-slate-500">Floral City Resident</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="#contact" class="inline-flex items-center gap-2 font-semibold text-coastal-700 hover:text-coastal-800 text-base">
+                    <span>See What Our Customers Are Saying</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner Section -->
+    <section class="py-20 relative overflow-hidden bg-slate-900">
+        <div class="absolute inset-0 z-0 opacity-30">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1200" alt="Gulf Fishing Boat" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-slate-950/80 z-0"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white tracking-tight mb-6">
+                Ready for Fresh Gulf Seafood?
+            </h2>
+            <p class="text-slate-300 text-lg font-light max-w-2xl mx-auto mb-10">
+                Call TJE Seafood today or stop by our Floral City location and discover what fresh seafood should taste like.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="tel:3524194495" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-coastal-600 hover:bg-coastal-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg transition-all hover:scale-105">
+                    <i class="fa-solid fa-phone text-lg"></i>
+                    <span>Call +1 (352) 419-4495</span>
+                </a>
+                <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-xl font-semibold transition-all">
+                    <i class="fa-solid fa-map-location-dot text-lg"></i>
+                    <span>Get Directions</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-sand-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-coastal-700 font-semibold text-sm uppercase tracking-wider block mb-2">
+                    <i class="fa-solid fa-envelope-open-text"></i> Get in Touch
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900 tracking-tight mb-4">
+                    Visit Our Store or Send a Message
+                </h2>
+                <p class="text-slate-600 text-lg font-light">
+                    Have a question about today's catch or want to place an order? Reach out to the Cochran family today.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Contact Info & Map Placeholder -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-6">
+                        <h3 class="text-2xl font-serif font-bold text-slate-900">TJE Seafood</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-coastal-100 text-coastal-700 flex items-center justify-center shrink-0 mt-1">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900 text-sm">Location</h4>
+                                    <p class="text-slate-600 text-sm">5636 S. Florida Ave<br>Floral City, FL 34436</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-coastal-100 text-coastal-700 flex items-center justify-center shrink-0 mt-1">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900 text-sm">Phone</h4>
+                                    <a href="tel:3524194495" class="text-coastal-700 text-sm hover:underline font-medium">+1 (352) 419-4495</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-coastal-100 text-coastal-700 flex items-center justify-center shrink-0 mt-1">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900 text-sm">Email</h4>
+                                    <a href="mailto:tjeseafood@gmail.com" class="text-coastal-700 text-sm hover:underline font-medium">tjeseafood@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-coastal-600 hover:text-white text-slate-700 flex items-center justify-center transition-colors">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-coastal-600 hover:text-white text-slate-700 flex items-center justify-center transition-colors">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <span class="text-xs text-slate-500 font-medium ml-2">3.5K+ Followers Online</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Mock / Visual Indicator -->
+                    <div class="rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm h-64 relative bg-slate-200">
+                        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=800" alt="Floral City Map Area" class="w-full h-full object-cover opacity-80">
+                        <div class="absolute inset-0 bg-slate-900/40 flex flex-col items-center justify-center text-center p-6 text-white">
+                            <div class="w-12 h-12 rounded-full bg-coastal-600 flex items-center justify-center text-white mb-3 shadow-lg animate-bounce">
+                                <i class="fa-solid fa-location-dot text-xl"></i>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg">Floral City Store</h4>
+                            <p class="text-xs text-slate-200 mt-1">5636 S. Florida Ave, Floral City, FL 34436</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-sm">
+                        <h3 class="text-2xl font-serif font-bold text-slate-900 mb-6">Send Us a Message</h3>
+                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Your Name</label>
+                                    <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-coastal-600 focus:ring-2 focus:ring-coastal-100 outline-none transition-all text-sm" placeholder="John Smith">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Email Address</label>
+                                    <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-coastal-600 focus:ring-2 focus:ring-coastal-100 outline-none transition-all text-sm" placeholder="john@example.com">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-coastal-600 focus:ring-2 focus:ring-coastal-100 outline-none transition-all text-sm" placeholder="(352) 000-0000">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Your Message / Order Inquiry</label>
+                                <textarea id="message" rows="5" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-coastal-600 focus:ring-2 focus:ring-coastal-100 outline-none transition-all text-sm" placeholder="Ask about today's fresh catch or Friday food truck..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-coastal-600 hover:bg-coastal-700 text-white font-semibold py-4 rounded-xl shadow-md transition-all hover:scale-[1.01] active:scale-[0.99] text-sm flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Send Message</span>
+                            </button>
+                            <div id="form-success" class="hidden text-center text-sm font-medium text-emerald-600 bg-emerald-50 p-4 rounded-xl">
+                                Thank you! Your message has been sent to TJE Seafood successfully.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-16 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Col 1: Brand -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-coastal-600 flex items-center justify-center text-white">
+                            <i class="fa-solid fa-fish text-lg"></i>
+                        </div>
+                        <span class="text-2xl font-serif font-bold text-white tracking-tight">TJE Seafood</span>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed font-light">
+                        Fresh from the Gulf. Family-owned and community loved, bringing the finest catch to Floral City and surrounding markets.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-slate-900 hover:bg-coastal-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-slate-900 hover:bg-coastal-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-instagram text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="text-white font-serif font-bold text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#seafood" class="hover:text-white transition-colors">Fresh Seafood</a></li>
+                        <li><a href="#markets" class="hover:text-white transition-colors">Markets</a></li>
+                        <li><a href="#foodtruck" class="hover:text-white transition-colors">Food Truck</a></li>
+                        <li><a href="#gallery" class="hover:text-white transition-colors">Photo Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-white transition-colors">Reviews</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Contact Info -->
+                <div>
+                    <h4 class="text-white font-serif font-bold text-base mb-4">Contact</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-coastal-600"></i>
+                            <a href="tel:3524194495" class="hover:text-white transition-colors">+1 (352) 419-4495</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-envelope text-coastal-600"></i>
+                            <a href="mailto:tjeseafood@gmail.com" class="hover:text-white transition-colors">tjeseafood@gmail.com</a>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-location-dot text-coastal-600 mt-1"></i>
+                            <span>5636 S. Florida Ave, Floral City, FL 34436</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Hours & Status -->
+                <div>
+                    <h4 class="text-white font-serif font-bold text-base mb-4">Store & Markets</h4>
+                    <p class="text-sm text-slate-400 mb-4 leading-relaxed">
+                        Retail Store in Floral City, multiple local farmers' markets, and Friday food truck. Call ahead for daily catch availability!
+                    </p>
+                    <div class="inline-flex items-center gap-2 bg-emerald-950/60 border border-emerald-800/60 px-3 py-1.5 rounded-full text-emerald-400 text-xs font-medium">
+                        <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span>Family Owned & Operated</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-900 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 TJE Seafood. All Rights Reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#home" class="hover:text-slate-400">Privacy Policy</a>
+                    <a href="#home" class="hover:text-slate-400">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Form Submission handler without alert()
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const successDiv = document.getElementById('form-success');
+            successDiv.classList.remove('hidden');
+            document.getElementById('contact-form').reset();
+            setTimeout(() => {
+                successDiv.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
